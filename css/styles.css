@@ -103,7 +103,7 @@ body {
 }
 
 .header-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .header-contacts {
@@ -112,8 +112,38 @@ body {
   margin-left: 330px;
 }
 .header-contacts-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
+.header-contact {
+  display: flex;
+}
+.mail::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../images/envelope.svg");
+  background-repeat:no-repeat ;
+  
+}
+.phone::before{
+  content: "";
+  width: 10px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../images/Phone.svg");
+  background-repeat:no-repeat ;
+}
+.header-contact:focus,
+.header-contact:hover 
+{
+  fill: #188ce8;
+
+  
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -133,8 +163,10 @@ body {
   background-color: var(--bkn);
   height: 600px;
   margin: 0 auto;
+  background-image: url(../images/hero-img.jpg);*/
 }
 
+/*../images/symbol-defs.svg#icon-envelope-hover.svg*/
 .hero-title {
   display: block;
   width: 696px;
@@ -195,23 +227,22 @@ body {
   width: 270px;
   height: 75px;
 }
-/*-----work----*/
-/*.work-container {
-  width: 1200px;
-  height: 386px;
-}*/
-/*.work-list {
+.benefits {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+}
+.benefits-link {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.work-list-parth {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
-}*/
+/*-----work----*/
+
 .work-list {
   display: flex;
   flex-wrap: wrap;
@@ -281,13 +312,118 @@ body {
   text-align: center;
   padding-bottom: 30px;
 }
+.team-person-list {
+  display: flex;
+  justify-content: center;
+}
+.social-item + .social-item {
+  margin-left: 10px;
+}
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+.social-img {
+  fill: #afb1b8;
+}
+.social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--whait);
+  align-items: center;
+  justify-content: center;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--blue);
+}
+.social-link:hover .social-img,
+.social-link:focus .social-img {
+  fill: var(--whait);
+}
+
+/*--customers--*/
+.customer-name {
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-text);
+  margin-bottom: 50px;
+}
+.customer-list {
+  display: flex;
+  justify-content: space-between;
+}
+.customer-item {
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.customer-img {
+  fill: #afb1b8;
+}
+.customer-item:hover,
+.customer-item:focus {
+  border-color: var(--bkncolor-herobtn-focushoverr);
+}
+.customer-link:focus .customer-img,
+.customer-link:hover .customer-img {
+  fill: var(--bkncolor-herobtn-focushoverr);
+}
+.customer-img {
+  width: 100%;
+  height: 100%;
+}
+.customer-item {
+  width: 170px;
+  height: 94px;
+}
+
 /* -------footr--------------*/
 .footr {
+  display: block;
   background-color: var(--bkn);
   max-width: 1600px;
   margin: 0 auto;
 }
+.footer-container {
+  display: flex;
+}
+.social-networks {
+  margin-left: 70px;
+  margin-top: 72px;
+}
+.social-link-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+}
+.social-img-footer {
+  fill: var(--whait);
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--blue);
+}
 
+.social-networks-name {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--whait);
+}
+.footer-social-networks {
+  margin-top: 20px;
+}
 .footer-logo {
   color: var(--whait);
 }
@@ -321,6 +457,7 @@ body {
   display: inline-block;
   padding-top: 60px;
 }
+
 /*------------- Портфоліо----*/
 
 .btn-focus-hover:focus,
