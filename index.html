@@ -17,16 +17,17 @@
    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body class="pt-main">
    <!---------------------Шапка сайту------------------>
-   <header class="header">
-      <div class="container header-container">
+   <header class="header header-container">
+      <div class="container ">
          <nav class="header-navigator">
             <a href="" class="logo link ">
-               <p>Web<span class="header-logo logo">Studio</span></p>
+               <p>Web</p>
+               <span class="header-logo logo">Studio</span>
             </a>
             <ul class="header-nav list ">
-               <li class="header-item"> <a href="./index.html" class="header-link link focus-hover">Студия</a></li>
+               <li class="header-item"> <a href="./index.html" class="header-link link focus-hover active-page">Студия</a></li>
                <li class="header-item"><a href="./Portfolio.html" class="header-link link focus-hover ">Портфолио</a></li>
                <li class="header-item"> <a href="" class="header-link link focus-hover">Контакты</a></li>
             </ul>
@@ -45,13 +46,13 @@
          </nav>
       </div>
    </header>
-   <main>
+   <main >
       <!--Заголовок-->
-      <section class="hero">
+      <section class="hero ">
 
 
          <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-         <button type="button" class="hero-btn btn">Заказать услугу</button>
+         <button type="button" class="hero-btn btn"data-open-modal=>Заказать услугу</button>
 
       </section>
       <section class="benefits">
@@ -98,9 +99,18 @@
          <div class="container mt">
             <h2 class="work-item">Чем мы занимаемся</h2>
             <ul class="work-list list">
-               <li class="work-list-parth"><img src="./images/box-1.png" alt="box-1" height="294" width="370"></li>
-               <li class="work-list-parth"><img src="./images/box-2.png" alt="box-2" height="294" width="370"></li>
-               <li class="work-list-parth"><img src="./images/box-3.png" alt="box-3" height="294" width="370"></li>
+               <li class="work-list-parth"><a class="link"><div class="work-item-name"><img src="./images/box-1.png" alt="box-1" height="294" width="370">
+               <p class="work-name-text">Десктопные приложения</p></div></a></li>
+               <li class="work-list-parth"><a class="link">
+                     <div class="work-item-name"><img src="./images/box-2.png" alt="box-1" height="294" width="370">
+                        <p class="work-name-text">Мобильные приложения</p>
+                     </div>
+                  </a></li>
+               <li class="work-list-parth"><a class="link">
+                     <div class="work-item-name"><img src="./images/box-3.png" alt="box-1" height="294" width="370">
+                        <p class="work-name-text">Дизайнерские решения</p>
+                     </div>
+                  </a></li>
             </ul>
          </div>
       </section>
@@ -206,14 +216,21 @@
          </ul>
          </div>
       </section>
+      <div class="backdrop is-hidden "data-backdrop><div class="modal">
+         <a href="" class="exit-figura link"data-close-modal><svg class="exit-emblem-modal"  ><use href="./images/sprite.svg#exit-emblem" ></use></svg></a>
+         
+      </div></div>
    </main>
+   <script src="./js/modal.js">
+   </script>
       <footer class="footr">
          <div class="container mt footer-container">
             <address class="address">
       
                <ul class="address-list list">
-                  <li><a href="" class="logo link log">
-                        <p>Web<span class="footer-logo logo">Studio</span></p>
+                  <li><a href="" class="logo link pading-foter-logo">
+                        <p>Web</p>
+                        <span class="footer-logo logo ">Studio</span>
                      </a></li>
                   <li class="map"><a href="" class="address-map link focus-hover">г. Киев, пр-т Леси Украинки, 26</a>
                   </li>
